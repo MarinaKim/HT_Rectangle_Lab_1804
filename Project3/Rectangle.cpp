@@ -49,6 +49,7 @@ void Rectangle::move(char direction, double value) {
 
 void Rectangle::coordinates(double xCenter, double yCenter, double &sideA, double& sideB)
 {
+	
 	this->sideA = sideA;
 	this->sideB = sideB;
 	center.setXY(xCenter, yCenter);
@@ -79,8 +80,8 @@ const double Rectangle::area() {
 
 bool Rectangle::compare(Rectangle obj) {
 	if ((this->area() == obj.area()) && (this->sideA == obj.sideA || this->sideA == obj.sideB))
-		return true;
-	else return false;
+		return 1;
+	else return 0;
 }
 
 const double Rectangle::Perimetr() {

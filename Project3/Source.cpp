@@ -218,6 +218,38 @@ int main()
 		out.close();
 		system("pause");
 	}break;
+		//compare
+	case 8: {
+		ifstream in;
+		ofstream out;
+		out.open("write.txt");
+		in.open("Read2.txt");
+		double xCenter, yCenter, sideA, sideB;
+		Rectangle *p;
+		p = new Rectangle[2];
+
+		int i = 0;
+		if (!in) {
+			cerr << "file open error" << endl;
+		}
+		else
+		{
+			while (!in.eof()) {
+					in >> xCenter >> yCenter >> sideA >> sideB;
+					Rectangle R(xCenter, yCenter, sideA, sideB);
+					p[i] = R;
+					cout << i << "\t" << p[i].getSideA() << "\t" << p[i].getSideB() << endl;
+					i++;
+			}
+			cout << "Compare:" << p[0].compare(p[1]) << endl;
+		}
+		
+			
+		
+
+		out.close();
+		system("pause");
+	}break;
 		system("pause");
 		return 0;
 	}
