@@ -5,10 +5,10 @@
 □	перемещения прямоугольника вдоль осей+
 □	изменения размера прямоугольника+
 □	определения площади,+
-периметра прямоугольника-
+периметра прямоугольника+
 □	метод для проверки на равенство  двух прямоугольников+
-□	вывод на экран информации об объекте
-□	для копирования объектов
+□	вывод на экран информации об объекте+
+□	для копирования объектов+
 □	остальные методы на усмотрение разработчика(методы set и get)
 Написать интерфейс для работы с классом. Реализовать динамический массив объектов класса с возможностью добавления,
 удаления объектов из массива. Реализовать возможность записи информации об объектах массива в текстовый файл, бинарный файл.
@@ -66,6 +66,7 @@ int main()
 		system("pause");
 	} break;
 
+// copy
 	case 3: {
 		ifstream in;
 		ofstream out;
@@ -243,13 +244,39 @@ int main()
 			}
 			cout << "Compare:" << p[0].compare(p[1]) << endl;
 		}
-		
-			
-		
-
 		out.close();
 		system("pause");
 	}break;
+
+
+	/*case 9: {
+		ifstream in;
+		ofstream out;
+		out.open("write.txt");
+		in.open("Read3.txt");
+		double xCenter, yCenter, sideA, sideB;
+		Rectangle *p;
+		p = new Rectangle[5];
+
+		int i = 0;
+		if (!in) {
+			cerr << "file open error" << endl;
+		}
+		else
+		{
+			while (!in.eof()) {
+				in >> xCenter >> yCenter >> sideA >> sideB;
+				Rectangle R(xCenter, yCenter, sideA, sideB, 5);
+				p[i++] = R;				
+			}}
+		Rectangle R(1, 1, 1, 1, 1);
+		p->push_back(R, p);
+		for (int i = 0; i < 6; i++) {
+			p[i].print();
+		}
+		out.close();
+		system("pause");
+	}break;*/
 		system("pause");
 		return 0;
 	}

@@ -2,7 +2,9 @@
 class Rectangle {
 private:
 	double sideA, sideB;
-	
+	int cur_size;
+	int buf_size;
+
 	class Point {
 	private:
 		double x;
@@ -26,8 +28,8 @@ public:
 	Rectangle() = default;
 	//parameter construct
 	Rectangle(double xa, double ya, double xb, double yb, double xc, double yc, double xd, double yd);
-
 	Rectangle(double xCenter, double yCenter, double sideA, double sideB);
+	Rectangle(double xCenter, double yCenter, double sideA, double sideB,int size);
 
 	//accessors
 	double getXA() { return a.getX(); }
@@ -48,4 +50,6 @@ public:
 	const double area();
 	bool compare(Rectangle obj);
 	const double Perimetr();
+	/*void push_back(const Rectangle &rec, Rectangle *p);
+	void print();*/
 };
