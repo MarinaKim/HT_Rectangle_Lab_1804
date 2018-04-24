@@ -50,6 +50,6 @@ public:
 	const double area();
 	bool compare(Rectangle obj);
 	const double Perimetr();
-	/*void push_back(const Rectangle &rec, Rectangle *p);
-	void print();*/
+	Rectangle& push_back(const Rectangle &rec);
+	void print();
 };
