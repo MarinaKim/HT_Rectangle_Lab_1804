@@ -108,21 +108,21 @@ const double Rectangle::Perimetr() {
 	return (this->sideA*2+this->sideB*2);
 }
 
-Rectangle& Rectangle::push_back(const Rectangle &rec) {
-	if (cur_size >= buf_size)
-	{
-		Rectangle *temp;// сразу удаляется по завершению условия
-		buf_size *= 2;
-		temp = new Rectangle[buf_size];
-		for (int i = 0; i < cur_size; i++)
-		{
-			temp[i] = p[i];
-		}
-		delete[]&p;
-		p = temp;
-	}
-	p[cur_size++] = rec;
-}
+//Rectangle& Rectangle::push_back(const Rectangle &rec) {
+//	if (cur_size >= buf_size)
+//	{
+//		Rectangle *temp;// сразу удаляется по завершению условия
+//		buf_size *= 2;
+//		temp = new Rectangle[buf_size];
+//		for (int i = 0; i < cur_size; i++)
+//		{
+//			temp[i] = p[i];
+//		}
+//		delete[]&p;
+//		p = temp;
+//	}
+//	p[cur_size++] = rec;
+//}
 
 void Rectangle::print() {
 	for (int i = 0; i < cur_size; i++)
